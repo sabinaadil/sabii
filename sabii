@@ -1,0 +1,10 @@
+import pandas as pd
+
+# Reading the CSV file into a DataFrame
+full_health_data = pd.read_csv("data.csv", header=2, sep=",")
+
+# Calculating the correlation matrix and rounding the values to the nearest integer
+Corr_Matrix = round(full_health_data.corr(), 0)
+
+# Printing the correlation matrix
+print(Corr_Matrix)
